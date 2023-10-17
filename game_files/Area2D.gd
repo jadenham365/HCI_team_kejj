@@ -14,4 +14,5 @@ func handlewin():
 
 # TODO: Delete the coin when it is entered by another body
 func _on_coin_body_entered(body):
-	pass
+	if Input.is_action_pressed("ui_accept"):
+		queue_free()
