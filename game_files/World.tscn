@@ -55,8 +55,8 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -1310741, 0, 0, -1310740, 0, 0, -1310739, 0, 0, -1310738, 0, 0, -1310737, 0, 0, -1310736, 0, 0, -1310735, 0, 0, -1310734, 0, 0, -1310733, 0, 0, -1310732, 0, 0, -1310731, 0, 0, -1310730, 0, 0, -1310729, 0, 0, -1310728, 0, 0, -1310727, 0, 0, -1310726, 0, 0, -1310725, 0, 0, -1310724, 0, 0, -1310723, 0, 0, -1310722, 0, 0, -1310721, 0, 0, -1376256, 0, 0, -1376255, 0, 0, -1376254, 0, 0, -1376253, 0, 0, -1376252, 0, 0, -1376251, 0, 0, -1376250, 0, 0, -1376249, 0, 0, -1376248, 0, 0, -1376247, 0, 0, -1376246, 0, 0, -1376245, 0, 0, -1376244, 0, 0, -1376243, 0, 0, -1376242, 0, 0, -1376241, 0, 0, -1376240, 0, 0, -1376239, 0, 0, -1376238, 0, 0, -1376237, 0, 0, -1376236, 0, 0, -1376235, 0, 0, -1245205, 0, 0, -1310699, 0, 0, -1179669, 0, 0, -1245163, 0, 0, -1114133, 0, 0, -1179627, 0, 0, -1048597, 0, 0, -1114091, 0, 0, -983061, 0, 0, -1048555, 0, 0, -917525, 0, 0, -983019, 0, 0, -851989, 0, 0, -917483, 0, 0, -786453, 0, 0, -851947, 0, 0, -720917, 0, 0, -786411, 0, 0, -655381, 0, 0, -720875, 0, 0, -589845, 0, 0, -655339, 0, 0, -524309, 0, 0, -589803, 0, 0, -458773, 0, 0, -524267, 0, 0, -393237, 0, 0, -458731, 0, 0, -327701, 0, 0, -393195, 0, 0, -262165, 0, 0, -327659, 0, 0, -196629, 0, 0, -262123, 0, 0, -131093, 0, 0, -196587, 0, 0, -65557, 0, 0, -131051, 0, 0, -21, 0, 0, -65515, 0, 0, 65515, 0, 0, 21, 0, 0, 131051, 0, 0, 65557, 0, 0, 196587, 0, 0, 131093, 0, 0, 262123, 0, 0, 196629, 0, 0, 327659, 0, 0, 262165, 0, 0, 393195, 0, 0, 327701, 0, 0, 458731, 0, 0, 393237, 0, 0, 524267, 0, 0, 458773, 0, 0, 589803, 0, 0, 524309, 0, 0, 655339, 0, 0, 589845, 0, 0, 720875, 0, 0, 655381, 0, 0, 786411, 0, 0, 720917, 0, 0, 851947, 0, 0, 786453, 0, 0, 917483, 0, 0, 851989, 0, 0, 983019, 0, 0, 917525, 0, 0, 1048555, 0, 0, 983061, 0, 0, 1114091, 0, 0, 1048597, 0, 0, 1179627, 0, 0, 1114133, 0, 0, 1245163, 0, 0, 1179669, 0, 0, 1310699, 0, 0, 1245205, 0, 0, 1376235, 0, 0, 1310741, 0, 0, 1441771, 0, 0, 1441772, 0, 0, 1441773, 0, 0, 1441774, 0, 0, 1441775, 0, 0, 1441776, 0, 0, 1441777, 0, 0, 1441778, 0, 0, 1441779, 0, 0, 1441780, 0, 0, 1441781, 0, 0, 1441782, 0, 0, 1441783, 0, 0, 1441784, 0, 0, 1441785, 0, 0, 1441786, 0, 0, 1441787, 0, 0, 1441788, 0, 0, 1441789, 0, 0, 1441790, 0, 0, 1441791, 0, 0, 1376256, 0, 0, 1376257, 0, 0, 1376258, 0, 0, 1376259, 0, 0, 1376260, 0, 0, 1376261, 0, 0, 1376262, 0, 0, 1376263, 0, 0, 1376264, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376267, 0, 0, 1376268, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1376274, 0, 0, 1376275, 0, 0, 1376276, 0, 0, 1376277, 0, 0 )
 
-[node name="coin" type="Area2D" parent="."]
-position = Vector2( -229, -256 )
+[node name="coin" type="Area2D" parent="." groups=["coin_group"]]
+position = Vector2( -160, 326 )
 script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="coin"]
@@ -67,8 +67,8 @@ texture = ExtResource( 7 )
 position = Vector2( -33, -20 )
 shape = SubResource( 2 )
 
-[node name="coin2" type="Area2D" parent="."]
-position = Vector2( -106, -263 )
+[node name="coin2" type="Area2D" parent="." groups=["coin_group"]]
+position = Vector2( -108, 322 )
 script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="coin2"]
@@ -79,8 +79,8 @@ texture = ExtResource( 7 )
 position = Vector2( -33, -20 )
 shape = SubResource( 2 )
 
-[node name="coin3" type="Area2D" parent="."]
-position = Vector2( 15, -268 )
+[node name="coin3" type="Area2D" parent="." groups=["coin_group"]]
+position = Vector2( -56, 319 )
 script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="coin3"]
@@ -91,8 +91,8 @@ texture = ExtResource( 7 )
 position = Vector2( -33, -20 )
 shape = SubResource( 2 )
 
-[node name="coin4" type="Area2D" parent="."]
-position = Vector2( 126, -276 )
+[node name="coin4" type="Area2D" parent="." groups=["coin_group"]]
+position = Vector2( -10, 319 )
 script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="coin4"]
@@ -103,8 +103,8 @@ texture = ExtResource( 7 )
 position = Vector2( -33, -20 )
 shape = SubResource( 2 )
 
-[node name="coin5" type="Area2D" parent="."]
-position = Vector2( 253, -271 )
+[node name="coin5" type="Area2D" parent="." groups=["coin_group"]]
+position = Vector2( 38, 318 )
 script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="coin5"]
@@ -115,70 +115,10 @@ texture = ExtResource( 7 )
 position = Vector2( -33, -20 )
 shape = SubResource( 2 )
 
-[node name="coin6" type="Area2D" parent="."]
-position = Vector2( -212, 320 )
-script = ExtResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="coin6"]
-position = Vector2( -33, -18 )
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coin6"]
-position = Vector2( -33, -20 )
-shape = SubResource( 2 )
-
-[node name="coin7" type="Area2D" parent="."]
-position = Vector2( -104, -140 )
-script = ExtResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="coin7"]
-position = Vector2( -33, -18 )
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coin7"]
-position = Vector2( -33, -20 )
-shape = SubResource( 2 )
-
-[node name="coin8" type="Area2D" parent="."]
-position = Vector2( 49, -142 )
-script = ExtResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="coin8"]
-position = Vector2( -33, -18 )
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coin8"]
-position = Vector2( -33, -20 )
-shape = SubResource( 2 )
-
-[node name="coin9" type="Area2D" parent="."]
-position = Vector2( 154, -151 )
-script = ExtResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="coin9"]
-position = Vector2( -33, -18 )
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coin9"]
-position = Vector2( -33, -20 )
-shape = SubResource( 2 )
-
-[node name="coin10" type="Area2D" parent="."]
-position = Vector2( 269, -161 )
-script = ExtResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="coin10"]
-position = Vector2( -33, -18 )
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coin10"]
-position = Vector2( -33, -20 )
-shape = SubResource( 2 )
-
 [node name="Win" type="RichTextLabel" parent="."]
-margin_left = -170.0
+margin_left = -165.0
 margin_top = -152.0
-margin_right = 351.0
+margin_right = 356.0
 margin_bottom = 355.0
 custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
@@ -205,14 +145,4 @@ shape = SubResource( 4 )
 [connection signal="body_entered" from="coin4" to="coin4" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="coin5" to="Player" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="coin5" to="coin5" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin6" to="Player" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin6" to="coin6" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin7" to="Player" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin7" to="coin7" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin8" to="Player" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin8" to="coin8" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin9" to="Player" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin9" to="coin9" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin10" to="Player" method="_on_coin_body_entered"]
-[connection signal="body_entered" from="coin10" to="coin10" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="door" to="coin" method="_on_door_body_entered"]
