@@ -1,6 +1,10 @@
 extends KinematicBody2D
 const UP = Vector2(0,-1)
 const MAXSPEED = 120
+const MAXFALLSPEED = 300
+const SPRINTBOOST = 2
+const GRAVITY = 9.8
+const JUMPPOWER = 300
 var coins = 0
 var motion = Vector2()
 signal win
@@ -15,18 +19,32 @@ func _ready():
 func _process(delta):
 	# Left and right movements
 	if Input.is_action_pressed("right") and not Input.is_action_pressed("left"):
-		motion.x = MAXSPEED
+		if Input.is_action_pressed("sprint"):
+			motion.x = MAXSPEED * SPRINTBOOST
+		else:
+			motion.x = MAXSPEED
 	elif Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
-		motion.x = -MAXSPEED
+		if Input.is_action_pressed("sprint"):
+			motion.x = -MAXSPEED * SPRINTBOOST
+		else:
+			motion.x = -MAXSPEED
 	else:
 		motion.x = 0
 		
-	if Input.is_action_pressed("up") and not Input.is_action_pressed("down"):
-		motion.y = -MAXSPEED
-	elif Input.is_action_pressed("down") and not Input.is_action_pressed("up"):
-		motion.y = MAXSPEED
-	else:
-		motion.y = 0
+	
+#	if Input.is_action_pressed("up") and not Input.is_action_pressed("down"):
+#		motion.y = -MAXSPEED
+#	elif Input.is_action_pressed("down") and not Input.is_action_pressed("up"):
+#		motion.y = MAXSPEED
+#	else:
+#		motion.y = 0
+
+	motion.y += GRAVITY
+	if motion.y > MAXFALLSPEED:
+		motion.y = MAXFALLSPEED
+
+	if Input.is_action_pressed("jump") and is_on_floor():
+		motion.y = -JUMPPOWER
 	
 	motion = move_and_slide(motion,UP)
 
