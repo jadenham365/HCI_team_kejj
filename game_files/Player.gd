@@ -18,6 +18,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# Left and right movements
+	
 	if Input.is_action_pressed("right") and not Input.is_action_pressed("left"):
 		if Input.is_action_pressed("sprint"):
 			motion.x = MAXSPEED * SPRINTBOOST

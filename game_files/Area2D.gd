@@ -11,6 +11,9 @@ func _ready():
 func handlewin():
 	pass
 
+# restart game once player enters door
+func _on_door_body_entered(body):
+	get_tree().reload_current_scene()
 
 # TODO: Delete the coin when it is entered by another body
 func _on_coin_body_entered(body):
