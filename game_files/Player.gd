@@ -3,8 +3,8 @@ const UP = Vector2(0,-1)
 const MAXSPEED = 120
 const MAXFALLSPEED = 300
 const SPRINTBOOST = 2
-const GRAVITY = 9.8
-const JUMPPOWER = 300
+const GRAVITY = 600
+const JUMPPOWER = 200
 var coins = 0
 var motion = Vector2()
 signal win
@@ -40,7 +40,7 @@ func _process(delta):
 #	else:
 #		motion.y = 0
 
-	motion.y += GRAVITY
+	motion.y += GRAVITY * delta
 	if motion.y > MAXFALLSPEED:
 		motion.y = MAXFALLSPEED
 
