@@ -10,3 +10,7 @@ func _ready():
 # TODO: make map invisible when a player wins
 func handlewin():
 	pass
+
+
+func _on_coin_body_exited(body):
+	pass # Replace with function body.

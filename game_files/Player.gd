@@ -50,7 +50,7 @@ func _process(delta):
 	motion = move_and_slide(motion,UP)
 
 func _on_door_body_entered(body):
-	if coins == 5: 
+	if get_tree().get_nodes_in_group("coin_group").size() == 0: 
 		get_tree().reload_current_scene()
 
 # TODO: add 1 to coins
@@ -60,3 +60,6 @@ func _on_coin_body_entered(body):
 		coins += 1
 		#queue_free()
 		print(coins)
+		
+func _on_coin_body_exited(body):
+	pass
