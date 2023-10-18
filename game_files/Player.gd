@@ -3,7 +3,7 @@ const UP = Vector2(0,-1)
 const MAXSPEED = 120
 const MAXFALLSPEED = 300
 const SPRINTBOOST = 2
-const GRAVITY = 30
+const GRAVITY = 9.8
 const JUMPPOWER = 300
 var coins = 0
 var motion = Vector2()
@@ -56,7 +56,7 @@ func _on_door_body_entered(body):
 # TODO: add 1 to coins
 # if we have a winning number of coins, emit signal "win" and make yourself invisible
 func _on_coin_body_entered(body):
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("grab"):
 		coins += 1
 		#queue_free()
 		print(coins)

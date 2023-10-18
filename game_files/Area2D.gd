@@ -18,6 +18,6 @@ func _on_door_body_entered(body):
 
 # TODO: Delete the coin when it is entered by another body
 func _on_coin_body_entered(body):
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("grab"):
 		self.queue_free()
 		#print(get_tree().get_nodes_in_group("coin_group").size())
