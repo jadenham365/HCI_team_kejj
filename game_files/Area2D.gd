@@ -25,9 +25,8 @@ func _process(delta):
 
 func _on_coin_body_entered(body):
 	is_player_inside = true
-	print('hi')
 		#print(get_tree().get_nodes_in_group("coin_group").size())
 
 func _on_coin_body_exited(body):
 	is_player_inside = false
-	print('bye')
+
