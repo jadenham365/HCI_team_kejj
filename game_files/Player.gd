@@ -52,6 +52,7 @@ func _process(delta):
 func _on_door_body_entered(body):
 	if get_tree().get_nodes_in_group("coin_group").size() == 0: 
 		get_tree().reload_current_scene()
+		emit_signal("win")
 
 # TODO: add 1 to coins
 # if we have a winning number of coins, emit signal "win" and make yourself invisible

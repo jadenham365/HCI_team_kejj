@@ -12,13 +12,15 @@ func _ready():
 	# TODO: make invisible on start
 	
 func handlewin():
-	show_time = true
+	var secs = fmod(time, 60)
+	var mins = fmod(time, 3600) / 60
+	var millis = int((secs - int(secs)) * 1000)
+	win_time = "%02d:%02d.%03d" % [mins, secs, millis]
+	print("Time: " + win_time)
+	time = 0
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if show_time:
-		# TODO: show a winning screen with the player's time
-		pass
-	else:
-		time += delta
+	time += delta
 	
