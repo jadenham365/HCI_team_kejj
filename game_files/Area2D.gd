@@ -1,15 +1,16 @@
+# Global.gd
 extends Area2D
 
 var is_player_inside = false
-
+var missed_s = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var playernode = get_tree().get_root().find_node("Player", true, false)
-	playernode.connect("win", self, "handlewin")
+	playernode.connect("win", Global, "handlewin2")
 
 
 # TODO: Make the coins invisible on a win
-func handlewin():
+func handlewin2():
 	pass
 
 # restart game once player enters door
@@ -21,6 +22,11 @@ func _on_door_body_entered(body):
 func _process(delta):
 	if is_player_inside and Input.is_action_just_pressed("grab"):
 		queue_free()
+	if not is_player_inside and Input.is_action_just_pressed("grab"):
+		missed_s += 1
+	Global.missed = missed_s
+	
+	
 # TODO: Delete the coin when it is entered by another body
 
 func _on_coin_body_entered(body):

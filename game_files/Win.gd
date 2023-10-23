@@ -3,6 +3,7 @@ extends RichTextLabel
 var time = 0
 var show_time = false
 var win_time = "0"
+var missed = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,9 +19,12 @@ func handlewin():
 	win_time = "%02d:%02d.%03d" % [mins, secs, millis]
 	print("Time: " + win_time)
 	time = 0
+	print("Missed Grabs: " + str(Global.missed - 4))
+	Global.missed = 0
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time += delta
+	#print(Global.missed)
 	

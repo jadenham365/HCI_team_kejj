@@ -8,6 +8,7 @@ const JUMPPOWER = 200
 var coins = 0
 var motion = Vector2()
 signal win
+var failed_grabs = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -60,7 +61,7 @@ func _on_coin_body_entered(body):
 	if Input.is_action_pressed("grab"):
 		coins += 1
 		#queue_free()
-		print(coins)
+		#print(coins)
 		
 func _on_coin_body_exited(body):
 	pass
