@@ -9,6 +9,11 @@ var coins = 0
 var motion = Vector2()
 signal win
 var failed_grabs = 0
+var lefts = 0
+var rights = 0
+var sprints = 0
+var jumps = 0
+var grabs = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -49,10 +54,25 @@ func _process(delta):
 		motion.y = -JUMPPOWER
 	
 	motion = move_and_slide(motion,UP)
+	if Input.is_action_just_pressed("left"):
+		lefts+=1
+	if Input.is_action_just_pressed("right"):
+		rights+=1
+	if Input.is_action_just_pressed("jump"):
+		jumps+=1
+	if Input.is_action_just_pressed("sprint"):
+		sprints+=1
+	if Input.is_action_just_pressed("grab"):
+		grabs += 1
 
 func _on_door_body_entered(body):
 	if get_tree().get_nodes_in_group("coin_group").size() == 0: 
 		get_tree().reload_current_scene()
+		print("Lefts: " + str(lefts))
+		print("Rights: " + str(rights))
+		print("Jumps: " + str(jumps))
+		print("Sprints: " + str(sprints))
+		print("Grabs: " + str(grabs))
 		emit_signal("win")
 
 # TODO: add 1 to coins
