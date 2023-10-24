@@ -1,4 +1,4 @@
-# HCI_team_kejj
+# HCI_team_kejj (Requiries Windows Computer to Run)
 This is the repo for Project 1 of the HCI course.
 
 ### Requirements and Running Game
@@ -24,13 +24,13 @@ Must hold any button on the front to complete the circuit (Clove or Pentagon).
 - Grab: Oval
 
 #### Top View of Apparatus
-![top view](./images/top_view.jpd)
+![top view](./images/top_view.jpg)
 
 #### Left View of Apparatus
-![left view](./images/left_view.jpd)
+![left view](./images/left_view.jpg)
 
 #### Right View of Apparatus
-![right view](./images/right_view.jpd)
+![right view](./images/right_view.jpg)
 
 ### Contributions
 - Kendrick: Skeleton code, coin interaction, time+input recording, level design, graphs
