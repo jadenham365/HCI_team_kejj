@@ -1,4 +1,4 @@
-# HCI_team_kejj (Requiries Windows Computer to Run)
+# HCI_team_kejj (Requires Windows Computer to Run)
 This is the repo for Project 1 of the HCI course.
 
 ### Requirements and Running Game
